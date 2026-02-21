@@ -1,0 +1,10 @@
+{
+  "interval_ms": 60000,
+  "api_port": 8787,
+  "symbols": ["SPY", "QQQ", "IWM"],
+  "timeframe": "1Hour",
+  "max_points": 600,
+  "data_dir": "../data/research",
+  "state_file": "../data/research/state-node.json",
+  "skip_closed_unchanged": true
+}
