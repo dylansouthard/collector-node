@@ -5,3 +5,5 @@ config.json
 .DS_Store
 tmp
 stderr.log
+.well-known
+.htaccess
