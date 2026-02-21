@@ -1,10 +1,17 @@
 {
   "interval_ms": 60000,
   "api_port": 8787,
-  "symbols": ["SPY", "QQQ", "IWM"],
+  "symbols": [
+    "SPY", "QQQ", "IWM", "DIA",
+    "XLK", "XLF", "XLE", "XLV",
+    "TLT", "GLD", "SLV",
+    "AAPL", "MSFT", "NVDA", "AMZN", "GOOGL", "META", "TSLA",
+    "JPM", "BRK.B", "V", "MA", "UNH", "XOM", "JNJ", "PG", "HD", "COST"
+  ],
   "timeframe": "1Hour",
   "max_points": 600,
   "data_dir": "../data/research",
   "state_file": "../data/research/state-node.json",
+  "log_file": "../logs/research/collector-node.log",
   "skip_closed_unchanged": true
 }

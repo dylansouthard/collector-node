@@ -15,6 +15,7 @@ const DEFAULTS = {
   max_points: 600,
   data_dir: "../data/research",
   state_file: "../data/research/state-node.json",
+  log_file: "../logs/research/collector-node.log",
   skip_closed_unchanged: true
 };
 
@@ -53,6 +54,7 @@ function loadConfig() {
   cfg.symbols = normalizeSymbols(envSymbols || cfg.symbols);
   cfg.data_dir = resolvePath(process.env.DATA_DIR || cfg.data_dir);
   cfg.state_file = resolvePath(process.env.STATE_FILE || cfg.state_file);
+  cfg.log_file = resolvePath(process.env.LOG_FILE || cfg.log_file);
 
   const alpacaKey = process.env.ALPACA_PAPER_KEY || process.env.ALPACA_KEY;
   const alpacaSecret = process.env.ALPACA_PAPER_SECRET || process.env.ALPACA_SECRET;

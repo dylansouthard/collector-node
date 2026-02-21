@@ -7,6 +7,7 @@ Node.js collector service for TraderBot research data.
 - Poll Alpaca at a configurable interval.
 - Save points to `data/research/<SYMBOL>.json` in the same format used by Python.
 - Expose API endpoints to fetch the most recent `X` points for an array of symbols.
+- Append one-line operational logs to a single log file (no per-run log file churn).
 
 ## Setup
 
@@ -43,6 +44,15 @@ For local dev, it can also fall back to `../.env` if keys are not set in local `
 ```bash
 npm start
 ```
+
+## Logging
+
+Set `log_file` in `config.json` (or `LOG_FILE` env var).  
+Each collection tick appends short timestamped lines to this single file, including:
+
+- tick start/end
+- symbol saved/skipped/no-data/error
+- reason (for closed-market unchanged skips, missing data, etc.)
 
 ## API
 
